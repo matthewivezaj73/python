@@ -74,8 +74,9 @@ while not not_done:
     print("Would you like to enter a new vehicle? Please respond with y for yes or n for no:")
     #Getting the users input.
     response = input("")
-    
+    #Setting a flag to false.
     not_response = False
+    #Testing for the response of the user.
     while not not_response:
         if response.lower() == "y":
             print("Great, moving on!")
