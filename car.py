@@ -7,7 +7,7 @@ class Car:
         self.color = color
         self.name = name
         self.make = make
-    def get_color(self,color):
+    def get_color(self):
         """
         Created a method that gets the color of a car and stores it in a database.
         """
@@ -23,7 +23,7 @@ class Car:
                 print("color has been recorded!")
             else:
                 print("Sorry, but: \'"+color+"\'"+" is not a color of the proper format. Please try again")
-    def get_make(self,make):
+    def get_make(self):
         """
         Created a method that gets the make of a car and stores it in a database.
         """
@@ -39,7 +39,7 @@ class Car:
                 print("Make has been recorded!")
             else:
                 print("Sorry, but: \'"+make+"\'"+" is not a make of the proper format. Please try again")
-    def get_name(self,name):
+    def get_name(self):
         """
         Created a method that gets the name of a car and stores it in a database.
         """
