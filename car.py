@@ -69,4 +69,6 @@ while not not_done:
     #Calling the get_name() method
     my_newCar.get_name()
 
-    
+    print("Would you like to enter a new vehicle? Please respond with y for yes or n for no:")
+    #Getting the users input.
+    response = input("")
