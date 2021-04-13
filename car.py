@@ -76,6 +76,6 @@ while not not_done:
     response = input("")
     if response.lower() == "y":
         print("Great, moving on!")
-    else:
+    elif response.lower() == "n":
         print("See you later!")
         not_done = True
