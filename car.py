@@ -74,8 +74,13 @@ while not not_done:
     print("Would you like to enter a new vehicle? Please respond with y for yes or n for no:")
     #Getting the users input.
     response = input("")
-    if response.lower() == "y":
-        print("Great, moving on!")
-    elif response.lower() == "n":
-        print("See you later!")
-        not_done = True
+    
+    not_response = False
+    while not not_response:
+        if response.lower() == "y":
+            print("Great, moving on!")
+            not_response = True
+        elif response.lower() == "n":
+            print("See you later!")
+            not_done = True
+            not_response = True
