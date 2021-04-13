@@ -84,5 +84,6 @@ while not not_done:
             not_response = True
         elif response.lower() == "n":
             print("See you later!")
+            #Setting both flags to true so that we end the program.
             not_done = True
             not_response = True
