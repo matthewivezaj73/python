@@ -80,6 +80,7 @@ while not not_done:
     while not not_response:
         if response.lower() == "y":
             print("Great, moving on!")
+            #Setting the response to true to only break out of the not_response loop.
             not_response = True
         elif response.lower() == "n":
             print("See you later!")
