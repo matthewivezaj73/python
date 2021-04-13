@@ -1,0 +1,84 @@
+#IMporting libraries
+import os
+import platform
+#Importing datetime from datetime.
+from datetime import datetime
+#Notifying the user that they must enter the IP address now
+print("Please input your IP address:")
+#Allowing the user to enter the address as input.
+address = input(" ")
+#Splitting at the decimal.
+octet_address = address.split('.')
+#Creating a full octet
+full_octet_address = octet_address[0] + "." + octet_address[1] + "." + octet_address[2] + "." 
+#Setting a flag so that the first octet in the address may be tested.
+not_done = False
+while not not_done:
+   #Asking the user for the first number and typecasting the input to type int.
+   print("Please enter the first octet in the address: ")
+   #Accepting the user input here.
+   first_num = input(" ")
+   #Testing what the user decided to enter and exiting if it passes.
+   if first_num.isdigit():
+      print("Moving on!")
+      # typecasting the input to type int
+      first_num = int(first_num)
+      not_done = True
+   else:
+      print("Sorry, please try again!")
+#Setting a flag so that the first octet in the address may be tested.
+last_done = False
+while not last_done:
+   #Asking the user for the first number.
+   print("Please enter the last octet in the address: ")
+   #Accepting the user input here.
+   last_num = input(" ") 
+   #Testing what the user decided to enter and exiting if it passes.
+   if last_num.isdigit():
+      print("Moving on!")
+      # typecasting the input to type int
+      last_num = int(last_num)
+      last_done = True
+   else:
+      print("Sorry, please try again!")
+#Typecasting last_num to int and adding 1 to it.
+last_num = int(last_num) 
+#Assigning the platform object to a variable. 
+systemOS = platform.system()
+
+#If the system OS is Windows, we will notify the user and create a specific command and set it equal to ping1
+if (systemOS == "Windows"):
+   print("The host seems to be alive...")
+   ping1 = "ping -n 1 "
+#If the system OS is Linux, we will notify the user and create a specific command and set it equal to ping1
+elif (systemOS == "Linux"):
+   print("The host seems to be alive...")
+   ping1 = "ping -c 1 "
+else:
+   print("This host seems to be alive...")
+   ping1 = "ping -c 1 "
+#If the system OS is anything else, we will notify the user and create a specific command and set it equal to ping1
+# else:
+#    
+#Setting a variable equal to a datetime object.
+my_datetime = datetime.now()
+print ("Scanning the following address: " +str(full_octet_address)+str(last_num)+" in Progress...")
+
+for ipAddr in range(first_num,last_num):
+   #Typecasting the ipAddr variable to an str and concatenating it.
+   my_addrss = full_octet_address + str(ipAddr)
+   #Typecasting the my_address variable to an str and concatenating it.
+   comm = ping1 + my_addrss
+   response = os.popen(comm)
+   #Parsing through each line in the response.
+   for line in response.readlines():
+      if(line.count("TTL")):
+         break
+      if (line.count("TTL")):
+         print (my_addrss, "--> Live")
+#Setting a variable equal to a datetime object.         
+your_datetime = datetime.now()
+total = your_datetime - my_datetime
+#Notifying the user how much time the scan took.
+print("If the scan is less than .001 seconds, then I am afraid it is dead...")
+print ("The scan took: ",total," seconds.")
