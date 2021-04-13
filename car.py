@@ -64,6 +64,9 @@ while not not_done:
 
     #Calling the get_color() method.
     my_newCar.get_color()
-    #Calling the get_make method
+    #Calling the get_make() method
     my_newCar.get_make()
+    #Calling the get_name() method
+    my_newCar.get_name()
+
     
