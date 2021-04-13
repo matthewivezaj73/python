@@ -21,6 +21,7 @@ class Car:
             color = input("")
             if color.isalnum():
                 print("color has been recorded!")
+                not_color = True
             else:
                 print("Sorry, but: \'"+color+"\'"+" is not a color of the proper format. Please try again")
     def get_make(self):
@@ -37,6 +38,7 @@ class Car:
             make = input("")
             if make.isalnum():
                 print("Make has been recorded!")
+                not_make = True
             else:
                 print("Sorry, but: \'"+make+"\'"+" is not a make of the proper format. Please try again")
     def get_name(self):
@@ -53,6 +55,7 @@ class Car:
             name = input("")
             if name.isalnum():
                 print("Name has been recorded!")
+                not_name = True
             else:
                 print("Sorry, but: \'"+name+"\'"+" is not a name of the proper format. Please try again")
 
