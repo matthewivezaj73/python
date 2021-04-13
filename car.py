@@ -58,3 +58,12 @@ class Car:
 
 #Creating an instance of a car
 my_newCar = Car("Red","Honda","F-150")
+#Setting a flag.
+not_done = False
+while not not_done:
+
+    #Calling the get_color() method.
+    my_newCar.get_color()
+    #Calling the get_make method
+    my_newCar.get_make()
+    
