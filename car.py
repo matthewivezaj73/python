@@ -1,5 +1,5 @@
 #car.py
-class car:
+class Car:
     def __init__(self,color,name,make):
         """
         Initializing color, name, and make
@@ -55,3 +55,6 @@ class car:
                 print("Name has been recorded!")
             else:
                 print("Sorry, but: \'"+name+"\'"+" is not a name of the proper format. Please try again")
+
+#Creating an instance of a car
+my_newCar = Car("Red","Honda","F-150")
