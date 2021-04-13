@@ -19,7 +19,7 @@ class Car:
         while not not_color:
             #Asking for the user's input.
             color = input("")
-            if ("-" in color) and (color.replace('-','')).isalnum():
+            if color.isalnum():
                 print("color has been recorded!")
             else:
                 print("Sorry, but: \'"+color+"\'"+" is not a color of the proper format. Please try again")
@@ -35,7 +35,7 @@ class Car:
         while not not_make:
             #Asking for the user's input.
             make = input("")
-            if ("-" in make) and (make.replace('-','')).isalnum():
+            if make.isalnum():
                 print("Make has been recorded!")
             else:
                 print("Sorry, but: \'"+make+"\'"+" is not a make of the proper format. Please try again")
@@ -51,7 +51,7 @@ class Car:
         while not not_name:
             #Asking for the user's input.
             name = input("")
-            if ("-" in name) and (name.replace('-','')).isalnum():
+            if name.isalnum():
                 print("Name has been recorded!")
             else:
                 print("Sorry, but: \'"+name+"\'"+" is not a name of the proper format. Please try again")
