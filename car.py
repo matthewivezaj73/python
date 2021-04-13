@@ -61,7 +61,6 @@ my_newCar = Car("Red","Honda","F-150")
 #Setting a flag.
 not_done = False
 while not not_done:
-
     #Calling the get_color() method.
     my_newCar.get_color()
     #Calling the get_make() method
@@ -72,3 +71,8 @@ while not not_done:
     print("Would you like to enter a new vehicle? Please respond with y for yes or n for no:")
     #Getting the users input.
     response = input("")
+    if response.lower() == "y":
+        print("Great, moving on!")
+    else:
+        print("See you later!")
+        not_done = True
