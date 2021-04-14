@@ -9,6 +9,7 @@ while not not_age_done:
     print("What is your age?")
     #Allowing the user to input an age.
     persons_age = input()
+    not_age_done = new_person.persons_age_check(persons_age)
 #Setting a flag
 not_name_done = False
 # Asking for the not_name_done.
