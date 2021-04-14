@@ -5,9 +5,12 @@ while not not_age_done:
     print("What is your age?")
     #Allowing the user to input an age.
     persons_age = input()
-not_age_done = False
-# Asking for the persons name.
-while not not_age_done:
-    print("What is your user name?")
+not_name_done = False
+# Asking for the not_name_done.
+while not not_name_done:
+    print("What is your name?")
     #Allowing the user to input an name.
-    persons_name = input()
+    user_name = input()
+#Setting a flag
+not_color_done = False
+while not
