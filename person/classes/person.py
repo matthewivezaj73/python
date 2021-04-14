@@ -9,9 +9,15 @@ class Person:
         else:
             print("Sorry, please try again!")
     def persons_name_check(self,name):
-        """Created a method to check the input of the users age""" 
+        """Created a method to check the input of the users name""" 
         if ("." in name) and (name.replace('.','')).isalnum() or ("-" in name) and (name.replace('-','')).isalnum():
             print("Great, we have your name down!")
+        else:
+            print("Sorry, please try again!")
+    def persons_name_check(self,color):
+        """Created a method to check the input of the users name""" 
+        if (" " in color) and (color.replace(' ','')).isalnum() and len(color.strip()) > 0: 
+            print("Great, we have your favorite color down!")
         else:
             print("Sorry, please try again!")
 not_name_done = False
