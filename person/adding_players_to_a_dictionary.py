@@ -1,4 +1,5 @@
-from person.py import Person
+#mporting a class
+from classes.person import Person
 #Creating an instance of a person
 new_person = Person("Phil")
 #Adding a flag
