@@ -1,3 +1,5 @@
+#Creating a blank list.
+list_of_people = []
 #mporting a class
 from classes.person import Person
 #Creating an instance of a person
@@ -30,3 +32,5 @@ while not not_color_done:
     favorite_color = input()
     #Testing for the person's favorite color.
     not_color_done = new_person.persons_color_check(favorite_color)
+if not_color_done and not_name_done and not_age_done:
+    per
