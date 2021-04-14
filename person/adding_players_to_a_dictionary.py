@@ -13,4 +13,7 @@ while not not_name_done:
     user_name = input()
 #Setting a flag
 not_color_done = False
-while not
+#Testing for the favorite color
+while not not_color_done:
+    print("What is your favorite color?")
+    favorite_color = input()
