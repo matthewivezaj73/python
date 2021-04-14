@@ -38,6 +38,9 @@ while not not_finished_yet:
         not_color_done = new_person.persons_color_check(favorite_color)
     #Creating the dictionary
     person_profile = {"The persons name:":user_name,"The persons age:":persons_age, "The persons favorite color:":favorite_color}
+    #Printing the contents of the dictionary out.
+    print("This is what we currently have on record: ")
+    print(person_profile)
     #Appending each profile to the list of people.
     list_of_people.append(person_profile)
     #Asking the user if they would like ot add another user.
