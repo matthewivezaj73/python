@@ -2,7 +2,7 @@ class Person:
     def __init__(self,name=""):
         """Initializing the person's name"""
         self.name = name
-    def persons_age(self):
+    def persons_age_check(self):
         """ Created a method to check the input of the users age""" 
 not_name_done = False
 # Asking for the not_name_done.
