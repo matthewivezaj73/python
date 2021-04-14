@@ -44,4 +44,10 @@ while not not_finished_yet:
         list_of_people.append(person_profile)
     #Asking the user if they would like ot add another user.
     print("Would you like to add another user")
+    #Asking for the users input.
     add_another = input("Please enter y for yes or n for no: ")
+    if add_another.lower() == "y":
+        print("Moving on!")
+    elif add_another.lower() == "n":
+        print("Ok, all done!")
+        not_finished_yet = True
