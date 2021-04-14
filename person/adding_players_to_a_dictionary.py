@@ -47,7 +47,10 @@ while not not_finished_yet:
     #Asking for the users input.
     add_another = input("Please enter y for yes or n for no: ")
     if add_another.lower() == "y":
+        #Notifying the user that they are moving on.
         print("Moving on!")
     elif add_another.lower() == "n":
+        #Notifying the user that the process is complete
         print("Ok, all done!")
+        #Setting flag to true to break out of the loop
         not_finished_yet = True
