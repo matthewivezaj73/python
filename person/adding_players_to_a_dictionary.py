@@ -15,6 +15,8 @@ while not not_name_done:
     print("What is your name?")
     #Allowing the user to input an name.
     user_name = input()
+    #Testing for the person's name.
+    not_name_done = new_person.persons_name_check(user_name)
 #Setting a flag
 not_color_done = False
 #Testing for the favorite color
