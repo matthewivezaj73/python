@@ -23,4 +23,5 @@ while not not_color_done:
     print("What is your favorite color?")
     #Asking the user for input.
     favorite_color = input()
-    not_color_done = new_person.persons_color_check
+    #Testing for the person's favorite color.
+    not_color_done = new_person.persons_color_check(favorite_color)
