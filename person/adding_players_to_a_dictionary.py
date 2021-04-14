@@ -17,4 +17,5 @@ not_color_done = False
 while not not_color_done:
     #Asking the user for their favorite color.
     print("What is your favorite color?")
+    #Asking the user for input.
     favorite_color = input()
