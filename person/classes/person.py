@@ -11,7 +11,7 @@ class Person:
             print("Sorry, please try again!")
     def persons_name_check(self,name):
         """Created a method to check the input of the users name""" 
-        if ("." in name) and (name.replace('.','')).isalnum() or ("-" in name) and (name.replace('-','')).isalnum():
+        if ("." in name) and (name.replace('.','')).isalnum() or ("-" in name) and (name.replace('-','')).isalnum() or name.isalnum():
             print("Great, we have your name down!")
             return True
         else:
