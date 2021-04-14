@@ -1,3 +1,4 @@
+new_person = Person("Phil")
 #Adding a flag
 not_age_done = False
 # Asking for the persons age.
@@ -19,4 +20,4 @@ while not not_color_done:
     print("What is your favorite color?")
     #Asking the user for input.
     favorite_color = input()
-    
+    not_color_done = 
