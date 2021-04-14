@@ -1,3 +1,5 @@
+from person.py import Person
+#Creating an instance of a person
 new_person = Person("Phil")
 #Adding a flag
 not_age_done = False
