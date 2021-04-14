@@ -14,8 +14,8 @@ class Person:
             print("Great, we have your name down!")
         else:
             print("Sorry, please try again!")
-    def persons_name_check(self,color):
-        """Created a method to check the input of the users name""" 
+    def persons_color_check(self,color):
+        """Created a method to check the input of the users favorite color""" 
         if (" " in color) and (color.replace(' ','')).isalnum() and len(color.strip()) > 0: 
             print("Great, we have your favorite color down!")
         else:
