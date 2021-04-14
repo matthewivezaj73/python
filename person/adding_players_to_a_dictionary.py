@@ -34,4 +34,5 @@ while not not_color_done:
     not_color_done = new_person.persons_color_check(favorite_color)
 #If the not_color_done, not_name_done, and not_age_done are ok 
 if not_color_done and not_name_done and not_age_done:
+    #Creating the dictionary
     person_profile = {"The persons name:":user_name,"The persons age:":persons_age, "The persons favorite color:":favorite_color}
