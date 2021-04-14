@@ -1,4 +1,6 @@
+#Setting a flag.
 not_finished_yet = False
+#Testing until the user if finished.
 while not not_finished_yet:
     #Creating a blank list.
     list_of_people = []
