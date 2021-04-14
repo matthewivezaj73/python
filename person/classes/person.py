@@ -4,7 +4,7 @@ class Person:
         self.name = name
     def persons_age_check(self,name):
         """Created a method to check the input of the users age""" 
-        if ("." in name) and (name.replace('.','')).isalnum() or len(name) > 0:
+        if ("." in name) and (name.replace('.','')).isalnum() or ("-" in name) and (name.replace('-','')).isalnum():
             print("Great, we have your name down!")
         else:
             print("Sorry, please try again!")
