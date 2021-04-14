@@ -42,3 +42,6 @@ while not not_finished_yet:
         person_profile = {"The persons name:":user_name,"The persons age:":persons_age, "The persons favorite color:":favorite_color}
         #Appending each profile to the list of people.
         list_of_people.append(person_profile)
+    #Asking the user if they would like ot add another user.
+    print("Would you like to add another user")
+    add_another = input("Please enter y for yes or n for no: ")
