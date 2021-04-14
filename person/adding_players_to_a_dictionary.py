@@ -6,9 +6,8 @@ while not not_age_done:
     #Allowing the user to input an age.
     persons_age = input()
 not_age_done = False
-# Asking for the persons age.
+# Asking for the persons name.
 while not not_age_done:
-    print("What is your name?")
-    #Allowing the user to input an age.
+    print("What is your user name?")
+    #Allowing the user to input an name.
     persons_name = input()
-    
