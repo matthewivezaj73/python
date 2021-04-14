@@ -32,5 +32,6 @@ while not not_color_done:
     favorite_color = input()
     #Testing for the person's favorite color.
     not_color_done = new_person.persons_color_check(favorite_color)
+#If the not_color_done, not_name_done, and not_age_done are ok 
 if not_color_done and not_name_done and not_age_done:
     per
