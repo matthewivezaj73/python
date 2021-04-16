@@ -12,5 +12,7 @@ while not not_done:
         which_strike = input("Which blade will you be using to perform this strike?")
         #Testing the strike value passed.
         strike_done = new_lucy.strike(which_strike)
+    #Prompting the user to see if they would like to leave the dialogue.
     print("Would you like to leave the dialogue?")
+    #Asking for the users input.
     areyoudone = input("Please respond with y for yes or n for no: ")
