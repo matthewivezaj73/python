@@ -19,3 +19,5 @@ while not not_done:
     #If the user selects y for yes
     if areyoudone.lower() == "y":
         not_done = True
+    elif areyoudone.lower() == "n":
+        print("Moving on!")
