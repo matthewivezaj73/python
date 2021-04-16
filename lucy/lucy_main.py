@@ -1,5 +1,5 @@
 #Importing the Lucy class
-
+from lucy.classes.lucy_class import Lucy
 
 #Setting a flag
 not_done = False
