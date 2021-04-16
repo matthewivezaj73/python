@@ -1,7 +1,6 @@
 #Matthew Ivezaj
-#03/16/2021
-#IT 412
-#https://github.com/matthewivezaj/IT412/blob/main/weeks%208%20through%2010%20%20Final/classes/customer_class.py
+
+#
 class Player:
     def __init__(self, pid="", pname="", ptype=""):
         """
