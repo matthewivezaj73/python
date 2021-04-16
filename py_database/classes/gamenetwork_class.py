@@ -17,3 +17,5 @@ class Player:
         """Created a method to initiate a friend request"""
     def check_stats(self):
         """Created a method to initiate player stats."""
+    def trade_item(self):
+        """Created a method to trade items"""
