@@ -7,7 +7,7 @@ not_done = False
 while not not_done:
     #Asking the user which blade they will be using
     which_strike = input("Which blade will you be using to perform this strike?")
-    if which_strike.isalpha():
+    if which_strike:
         print("Arrrgghhhhh!!!!!")
     else:
         print("Shoot, it missed...")
