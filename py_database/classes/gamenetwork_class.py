@@ -13,9 +13,11 @@ class Player:
         self.pid = pid
         self.pname = pname
         self.ptype = ptype
-    def friend_request(self):
-        """Created a method to initiate a friend request"""
     def check_stats(self):
         """Created a method to initiate player stats."""
+    def friend_request(self):
+        """Created a method to initiate a friend request"""
+    def initiate_dialogue(self):
+        """Created a method to initiate dialogue"""
     def trade_item(self):
         """Created a method to trade items"""
