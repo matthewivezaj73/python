@@ -21,7 +21,7 @@ while not not_done:
         areyoudone = input("Please respond with y for yes or n for no: ")
         #If the user selects y for yes
         if areyoudone.lower() == "y":
-            #Setting flags to true to break out of the loops.
+            #Setting flags to true to break out of both of the loops.
             not_done = True
             not_question = True
         elif areyoudone.lower() == "n":
