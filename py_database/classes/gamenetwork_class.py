@@ -3,18 +3,17 @@
 #IT 412
 #https://github.com/matthewivezaj/IT412/blob/main/weeks%208%20through%2010%20%20Final/classes/customer_class.py
 class Inventory:
-    def __init__(self,Iname="",Iprice="",Ilocation=""):
+    def __init__(self, pid="", pname="", ptype=""):
         """
-        It takes name, age, and location as passed values.
+        It takes pid, pname, and ptype as passed values.
 
         Setting the defaults of these as blanks so I do not have to 
         create an instance every time I want to work with an instance of a class.
         """
-        #Initializing address, city_information, firstname, lastname, 
-        #company_name, email, phone_number, state_information, and zipcode
-        self.Iname = Iname
-        self.Iprice = Iprice
-        self.Ilocation = Ilocation
+        #Initializing pid, pname, and ptype. 
+        self.pid = pid
+        self.pname = pname
+        self.ptype = ptype
     def item_brand_check(self,item_brand):
         """
         Created a item_brand_check method to check a items 
