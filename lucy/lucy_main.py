@@ -25,5 +25,6 @@ while not not_done:
             not_done = True
             not_question = True
         elif areyoudone.lower() == "n":
+            #Setting flags to true to break out of one of the loops so we can continue the dialogue.
             print("Moving on!")
             not_question = True
