@@ -16,6 +16,7 @@ while not not_done:
     print("Would you like to leave the dialogue?")
     #Setting a flag
     not_question = False
+    #Testing if the user would like to continue the dialogue.
     while not not_question:
         #Asking for the users input.
         areyoudone = input("Please respond with y for yes or n for no: ")
