@@ -9,4 +9,4 @@ class Lucy:
         if strike.isalpha():
             return True
         else:
-            return False
+            print("Shoot, that didn't work!")
