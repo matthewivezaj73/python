@@ -14,6 +14,8 @@ while not not_done:
         strike_done = new_lucy.strike(which_strike)
     #Prompting the user to see if they would like to leave the dialogue.
     print("Would you like to leave the dialogue?")
+    #Setting a flag
+    not_question = False
     #Asking for the users input.
     areyoudone = input("Please respond with y for yes or n for no: ")
     #If the user selects y for yes
