@@ -1,7 +1,5 @@
 #Matthew Ivezaj
-#03/16/2021
-#IT 412
-#https://github.com/matthewivezaj/IT412/blob/main/weeks%208%20through%2010%20%20Final/test_cases/customer_test.py
+
 #Import unittest Library.
 import unittest
 #Import all methods from InventoryItem in the classes folder.
