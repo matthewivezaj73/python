@@ -5,6 +5,7 @@ class Lucy:
         self.age = age
     def strike(self,strike):
         """Created a method to indicate that Lucy performed a strike."""
+        #Checking to see if the strike is comprised of only alphabetical characters.
         if strike.isalpha():
             return True
         else:
