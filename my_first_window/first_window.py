@@ -8,10 +8,9 @@ from tkinter import ttk
 win = tk.Tk()   
 
 def click_me():
-    action.configure(text="** Button has been clicked!")
-    a_label.configure(foreground='blue')
-    a_label.configure(text="This is a blue label")
-
+    """Creating a function that inserts a text 
+    box once the button is clicked in the GUI"""
+    action.configure(text="Hello " + name.get())
 # Add a title       
 win.title("Python GUI")
 
