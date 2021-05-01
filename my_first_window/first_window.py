@@ -16,8 +16,11 @@ def click_me():
 win.title("Python GUI")
 
 # Disable resizing the GUI by passing in False/False
-#win.resizable(False, False)   
-ttk.Label(win, text="This is my virtual box!").grid(column=0, row=0)
+#win.resizable(False, False)  
+# 
+# #Adding a label 
+a_label = ttk.Label(win, text="This is my virtual box!")
+a_label.grid(column=0, row=0)
 # Enable resizing x-dimension, disable y-dimension 
 win.resizable(True, True) 
 
