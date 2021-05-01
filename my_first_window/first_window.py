@@ -11,6 +11,7 @@ def click_me():
     """Creating a function that inserts a text 
     box once the button is clicked in the GUI"""
     action.configure(text="Hello " + name.get())
+
 # Add a title       
 win.title("Python GUI")
 
@@ -18,11 +19,17 @@ win.title("Python GUI")
 #win.resizable(False, False)  
 # 
 # #Adding a label 
-a_label = ttk.Label(win, text="This is my virtual box!")
-a_label.grid(column=0, row=0)
+ttk.Label(win, text="Please enter your first name: ").grid(column=0, row=0)
+# ttk.Label(win, text="Please enter your last name: ").grid(column=0, row=0)
+# ttk.Label(win, text="Please enter your phone number: ").grid(column=0, row=0)
+# ttk.Label(win, text="Please enter your street address: ").grid(column=0, row=0)
 # Enable resizing x-dimension, disable y-dimension 
 win.resizable(True, True) 
 
+#Adding a text box entry widget
+name = tk.StringVar()
+name_entered = ttk.Entry(win, width=12, textvariable=name)
+name_entered.grid(column=0, rows=1)
 #Adding a button
 action = ttk.Button(win, text="Click me!", command=click_me)
 action.grid(column=1, row=0)
