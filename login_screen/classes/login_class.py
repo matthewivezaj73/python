@@ -11,7 +11,7 @@ class Login:
         self.time = time
     def check_name(self,username):
         """Created a method to verify the user name"""
-        if (("." in username) and (username.replace('.','')).isalpha()) or (("-" in username) and (username.replace('.','')).isalpha()) or (("." and "-" in username) and (username.replace('.','').replace('-','')).isalpha()) or username.isalpha():
+        if (("." in username) and (username.replace('.','')).isalpha()) or (("-" in username) and (username.replace('.','')).isalpha()) or username.isalpha():
             return True
         else:
             return False
