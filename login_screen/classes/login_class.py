@@ -9,4 +9,6 @@ class Login:
         self.name = name
         self.date = date
         self.time = time
-    
+    def check_name(self):
+        """Created a method to verify the user name"""
+        
