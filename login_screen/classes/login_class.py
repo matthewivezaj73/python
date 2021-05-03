@@ -13,13 +13,22 @@ class Login:
         """
         Created a method to verify the user name.
         """
-        if (("." in username) and (username.replace('.','')).isalpha()) or (("-" in username) and (username.replace('.','')).isalpha()) or username.isalpha():
+        #Validating the username.
+        if (("." in username) and (username.replace('.','')).isalnum()) or (("." in username) and (username.replace('.','')).isalnum()) or username.isalnum():
             return True
         else:
+            #Notifying the user that the username entered is not a valid option to choose.
+            print("Sorry, but, "+username+" is not a valid choice, please try again!")
             return False
     def check_password(self,password):
         """
         Creating a method to verify a password.
         """
-        if len(password) > 0:
-            
+        #Validating the password
+        if len(password) >= 8:
+            print("Your account has been created!")
+            return True
+        else:
+            #Notifying the user that the password entered is not a valid option to choose.
+            print("Sorry, but, "+password+" is not a valid choice, please try again!")
+            return False
