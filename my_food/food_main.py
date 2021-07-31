@@ -5,7 +5,7 @@ my_db = DB_Connect('root','','python_projects')
 #Creating an instance of the class.
 my_items = Items("Mike","322.32","32")
 #Creating a list of food to choose from.
-food_available = ["Hot dog buns","Celery","Lettuce","Milk","Eggs","Bread","Ramen Noodles","Ketchup","Muffins","Ground Beef"]
+food_available = ["Hot Dog Buns","Celery","Lettuce","Milk","Eggs","Bread","Ramen Noodles","Ketchup","Muffins","Ground Beef"]
 #Creating a list of drinks to choose from.
 drink_available = ['Lemonade', 'water', 'pepsi', 'root beer']
 #Creating a list of utilities available to buy.
@@ -23,12 +23,11 @@ not_items_to_buy = False
 my_db.executeQuery("TRUNCATE item_data")
 #Testing for the food.
 while not not_items_to_buy:
-
     #Asking the user what kind of food they would like to buy.
     my_food = input("What food would you like to buy today: ")
     #Checking if the food that the user entered is in the list.
     for food in food_available:
-        if food in food_available:
+        if food.title() in food_available:
             print(f"{my_food} is not available!")
             break
         else:
