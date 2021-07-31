@@ -1,3 +1,4 @@
+import pymysql
 class Items():
     """
     Creating a class that will hold 
@@ -50,3 +51,5 @@ class Items():
         Accepts the following passed values:
             - item_name
         """
+        #Creating a blank list to hold food.
+        my_food = []
