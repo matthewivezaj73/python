@@ -27,13 +27,14 @@ while not not_food:
     my_food = input("What food would you like to buy today: ")
     #Checking if the food that the user entered is in the list.
     for food in food_available:
-        if food.title() in food_available:
+        if food.title() not in food_available:
             print(f"{my_food} is not available!")
-            not_food = True
+
             break
         else:
-            print(f"{my_food} is  available!")
+            print(f"{my_food} is available!")
             stored_food.append(my_food)
+            not_food = True
             break
 #Setting a flag
 not_drink = False
@@ -45,11 +46,11 @@ while not not_drink:
     for drink in drink_available:
         if drink not in drink_available:
             print(f"{my_beverage} is not available!")
-            not_drink = True
             break
         else:
             print(f"{my_beverage} is available!")
             stored_drink.append(my_beverage)
+            not_drink = True
             break
 #Setting a flag
 not_utility = False
@@ -61,11 +62,11 @@ while not not_utility:
     for utility in utilities_avialable:
         if utility not in utilities_avialable:
             print(f"{my_utility} is not available!")
-            not_utility = True
             break
         else:
             print(f"{my_utility} is available!")
             stored_utility.append(my_utility)
+            not_utility = True
             break
 #Setting a flag
 not_item = False
@@ -77,11 +78,11 @@ while not not_item:
     for item in stored_item:
         if item not in items_available:
             print(f"{my_item} is not available!")
-            not_item = True
             break
         else:
             print(f"{my_item} is available!")
             stored_item.append(my_item)
+            not_item = True
             break
     #Inserting into the item_data table.
     my_db.executeQuery("INSERT INTO item_data(food, beverage, utility, item_quantity) VALUES (\'"+
