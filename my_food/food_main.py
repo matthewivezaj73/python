@@ -28,7 +28,8 @@ while not not_food:
     #Checking if the food that the user entered is in the list.
     for food in food_available:
         if food in food_available:
-            print("That food is not available!")
+            print(f"{my_food} is not available!")
+            break
         else:
             print(f"{my_food} is  available!")
             stored_food.append(my_food)
@@ -43,6 +44,7 @@ while not not_drink:
     for drink in drink_available:
         if drink not in drink_available:
             print(f"{my_beverage} is not available!")
+            break
         else:
             print(f"{my_beverage} is available!")
             stored_drink.append(my_beverage)
@@ -57,6 +59,7 @@ while not not_utility:
     for utility in utilities_avialable:
         if utility not in utilities_avialable:
             print(f"{my_utility} is not available!")
+            break
         else:
             print(f"{my_utility} is available!")
             stored_utility.append(my_utility)
@@ -71,6 +74,7 @@ while not not_item:
     for item in stored_item:
         if item not in items_available:
             print(f"{my_item} is not available!")
+            break
         else:
             print(f"{my_item} is available!")
             stored_item.append(my_item)
