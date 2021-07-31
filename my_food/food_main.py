@@ -18,17 +18,18 @@ stored_drink = []
 stored_utility = []
 stored_item = []
 #Setting a flag
-not_items_to_buy = False
+not_food = False
 #Truncating the database table.
 my_db.executeQuery("TRUNCATE item_data")
 #Testing for the food.
-while not not_items_to_buy:
+while not not_food:
     #Asking the user what kind of food they would like to buy.
     my_food = input("What food would you like to buy today: ")
     #Checking if the food that the user entered is in the list.
     for food in food_available:
         if food.title() in food_available:
             print(f"{my_food} is not available!")
+            not_food = True
             break
         else:
             print(f"{my_food} is  available!")
@@ -44,6 +45,7 @@ while not not_drink:
     for drink in drink_available:
         if drink not in drink_available:
             print(f"{my_beverage} is not available!")
+            not_drink = True
             break
         else:
             print(f"{my_beverage} is available!")
@@ -59,6 +61,7 @@ while not not_utility:
     for utility in utilities_avialable:
         if utility not in utilities_avialable:
             print(f"{my_utility} is not available!")
+            not_utility = True
             break
         else:
             print(f"{my_utility} is available!")
@@ -74,6 +77,7 @@ while not not_item:
     for item in stored_item:
         if item not in items_available:
             print(f"{my_item} is not available!")
+            not_item = True
             break
         else:
             print(f"{my_item} is available!")
