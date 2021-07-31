@@ -6,6 +6,8 @@ my_db = DB_Connect('root','','python_projects')
 my_items = Items("Mike","322.32","32")
 #Creating a list of food to choose from.
 food_available = ["Hot dog buns","Celery","Lettuce","Milk","Eggs","Bread","Ramen Noodles","Ketchup","Muffins","Ground Beef"]
+#Creating a list of drinks to choose from.
+drink_available = ['Lemonade', 'water', 'pepsi', 'root beer']
 #Creating a blank list that will hold food the user selects.
 stored_food = []
 #Setting a flag
@@ -23,13 +25,25 @@ while not not_food:
             stored_food.append(my_food)
             break
         else:
-            print("That food is not available, please choose again!")
-    #Adding the food that you are buying to the database.
-    for food in stored_food:
-        #Inserting into the crm_data table.
-        my_db.executeQuery("INSERT INTO crm_data(f_name, l_name, address, city, state, zip, company, primary_phone, secondary_phone, email_address) VALUES (\'"+
-        str(f_name) +"\',\'"+ str(l_name) +"\',\'"+str(street_address) +"\',\'"+ str(city)  +"\',\'"+str(state) +"\',\'"+str(zip_code) +"\',\'"+ str(company_name) +
-        "\',\'"+ phone1 +"\',\'"+ phone2 +"\',\'"+ str(email) +"\')")
+            print(f"Sorry, but {my_food} is not available, please choose again!")
+#Setting a flag
+not_drink = False
+#Testing for the beverage.
+while not not_drink:
+    #Asking the user what kind of food they would like to buy.
+    my_beverage = input("What drink would you like to buy today: ")
+    #Checking if the food that the user entered is in the list.
+    for drink in drink_available:
+        if food in food_available:
+            print("That food is available!")
+            stored_food.append(my_food)
+            break
+        else:
+            print(f"sorry, but {my_beverage} is not available, please choose again!")
+    #Inserting into the item_data table.
+    my_db.executeQuery("INSERT INTO item_data(food, beverage, utility, item_quantity) VALUES (\'"+
+    str(my_food) +"\',\'"+ str(my_beverage) +"\',\'"+str(street_address) +"\',\'"+ str(city)  +"\',\'"+str(state) +"\',\'"+str(zip_code) +"\',\'"+ str(company_name) +
+    "\',\'"+ phone1 +"\',\'"+ phone2 +"\',\'"+ str(email) +"\')")
 
     #Setting a flag
     not_more = False
