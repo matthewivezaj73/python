@@ -8,8 +8,15 @@ my_items = Items("Mike","322.32","32")
 food_available = ["Hot dog buns","Celery","Lettuce","Milk","Eggs","Bread","Ramen Noodles","Ketchup","Muffins","Ground Beef"]
 #Creating a list of drinks to choose from.
 drink_available = ['Lemonade', 'water', 'pepsi', 'root beer']
+#Creating a list of utilities available to buy.
+utilities_avialable  = ["Hammer","Saw","Ethernet cable","Mouse"]
+#Creating a list of items available to buy.
+items_available  = ["Gold Coin","Cusion","Flag","Hose"]
 #Creating a blank list that will hold food the user selects.
 stored_food = []
+stored_drink = []
+stored_utility = []
+stored_item = []
 #Setting a flag
 not_food = False
 #Truncating the database table.
@@ -21,11 +28,11 @@ while not not_food:
     #Checking if the food that the user entered is in the list.
     for food in food_available:
         if food in food_available:
-            print("That food is available!")
+            print("That food is not available!")
+        else:
+            print(f"{my_food} is  available!")
             stored_food.append(my_food)
             break
-        else:
-            print(f"Sorry, but {my_food} is not available, please choose again!")
 #Setting a flag
 not_drink = False
 #Testing for the beverage.
@@ -34,17 +41,43 @@ while not not_drink:
     my_beverage = input("What drink would you like to buy today: ")
     #Checking if the food that the user entered is in the list.
     for drink in drink_available:
-        if food in food_available:
-            print("That food is available!")
-            stored_food.append(my_food)
-            break
+        if drink not in drink_available:
+            print(f"{my_beverage} is not available!")
         else:
-            print(f"sorry, but {my_beverage} is not available, please choose again!")
+            print(f"{my_beverage} is available!")
+            stored_drink.append(my_beverage)
+            break
+#Setting a flag
+not_utility = False
+#Testing for the beverage.
+while not not_utility:
+    #Asking the user what kind of food they would like to buy.
+    my_utility = input("What utility would you like to buy today: ")
+    #Checking if the food that the user entered is in the list.
+    for utility in utilities_avialable:
+        if utility not in utilities_avialable:
+            print(f"{my_utility} is not available!")
+        else:
+            print(f"{my_utility} is available!")
+            stored_utility.append(my_utility)
+            break
+#Setting a flag
+not_item = False
+#Testing for the item.
+while not not_item:
+    #Asking the user what kind of food they would like to buy.
+    my_item = input("What item would you like to buy today: ")
+    #Checking if the food that the user entered is in the list.
+    for item in stored_item:
+        if item not in items_available:
+            print(f"{my_item} is not available!")
+        else:
+            print(f"{my_item} is available!")
+            stored_item.append(my_item)
+            break
     #Inserting into the item_data table.
     my_db.executeQuery("INSERT INTO item_data(food, beverage, utility, item_quantity) VALUES (\'"+
-    str(my_food) +"\',\'"+ str(my_beverage) +"\',\'"+str(street_address) +"\',\'"+ str(city)  +"\',\'"+str(state) +"\',\'"+str(zip_code) +"\',\'"+ str(company_name) +
-    "\',\'"+ phone1 +"\',\'"+ phone2 +"\',\'"+ str(email) +"\')")
-
+    str(my_food) +"\',\'"+ str(my_beverage) +"\',\'"+str(my_utility) +"\',\'"+ str(my_item)  +"\')")
     #Setting a flag
     not_more = False
     #Testing for the user's input.
