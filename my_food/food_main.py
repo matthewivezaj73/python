@@ -96,5 +96,5 @@ while not not_item:
         if more_food.lower == "y":
             not_more = True
         elif more_food.lower() == "n":
-            not_items_to_buy = True
+            not_item = True
             not_more = True
