@@ -18,11 +18,12 @@ stored_drink = []
 stored_utility = []
 stored_item = []
 #Setting a flag
-not_food = False
+not_items_to_buy = False
 #Truncating the database table.
 my_db.executeQuery("TRUNCATE item_data")
 #Testing for the food.
-while not not_food:
+while not not_items_to_buy:
+
     #Asking the user what kind of food they would like to buy.
     my_food = input("What food would you like to buy today: ")
     #Checking if the food that the user entered is in the list.
@@ -88,3 +89,8 @@ while not not_item:
     while not not_more:
         #Asking the user if they would like to buy more food.
         more_food = input("Would you like to buy some more food? Y/N: ")
+        if more_food.lower == "y":
+            not_more = True
+        elif more_food.lower() == "n":
+            not_items_to_buy = True
+            not_more = True
