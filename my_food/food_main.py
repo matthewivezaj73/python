@@ -18,22 +18,7 @@ while not not_food:
             print("That food is not available, please choose again!")
     #Setting a flag
     not_more = False
-    #Testing for output.
+    #Testing for the user's input.
     while not not_more:
         #Asking the user if they would like to buy more food.
         more_food = input("Would you like to buy some more food? Y/N: ")
-        #If the user select y for yes.
-        if more_food.lower() == 'y':
-            print("Moving on!")
-            not_more = True
-        #If the user select y for yes.
-        elif more_food.lower() == 'n':
-            print("Here is what you bought:")
-            for my_food in stored_food:
-                print(f"You bought some: {my_food}")
-            print("Good bye!")
-            not_food = True
-            not_more = True
-        #Handling the alternative case.
-        else:
-            print("Try again!")
