@@ -16,6 +16,9 @@ while not not_food:
             break
         else:
             print("That food is not available, please choose again!")
+    #Adding the food that you are buying to the database.
+    for food in stored_food:
+        
     #Setting a flag
     not_more = False
     #Testing for the user's input.
