@@ -22,7 +22,7 @@ class Items():
         Accepts the following passed values:
             - totalPaid
         """
-    def moreFood(self,more_food):
+    def moreFood(self,more_food,stored_food):
         """
         Creating a method that asks the 
         user if they would like to buy more food.
